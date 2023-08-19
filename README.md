@@ -10,9 +10,13 @@ We use [conda](https://docs.conda.io/en/latest/) for environment management. To 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your_username/your_repository_name.git
+   git clone https://github.com/abbas-tari/raft.git
    cd your_repository_name
 
-2. conda env create -f environment.yml
+2. 
+    ```bash
+    conda env create -f environment.yml
 
-3. conda activate raft
+3. 
+    ```bash
+    conda activate raft
