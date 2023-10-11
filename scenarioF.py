@@ -444,7 +444,14 @@ plot_error_history(distributed_formation_objects)
 # After the simulation is finished
 latex_table = tabulate(log_table[:20], headers="keys", tablefmt="latex_booktabs")
 print(latex_table)
-with open("C:\\Users\\abbast\\OneDrive - Universitetet i Oslo\Hobbies\\Paper I\\Conference-LaTeX-template_10-17-19\\Imgs_f_a=n_v8\\log_table.csv", "w", newline="") as csvfile:
+# Get the current working directory
+current_dir = os.getcwd()
+
+# Construct the path to your file
+file_path = os.path.join(current_dir, "log_table.csv")
+
+# Now use the file_path variable in your with statement
+with open(file_path, "w", newline="") as csvfile:
     fieldnames = ["type", "node", "term", "frame"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
